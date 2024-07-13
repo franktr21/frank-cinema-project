@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Strange - In the Multiverse of Madness - Reservation</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../assets/doctor_strange_pixel_by_president_liv_dapu6qb-fullview.jpg">
+</head>
+
+<body>
+  <div class="container">
+    <div class="date-container">
+      <nav>
+        <button id="back-home-button" data-test="example test">
+          <div>
+            <img src="../assets/back.svg" alt="">
+          </div>
+        </button>
+        <button>
+          <div>
+            <img src="../assets/3dots.svg" alt="">
+          </div>
+        </button>
+      </nav>
+      <div class="content-container">
+        <div>
+          <h1>
+            <b>Doctor Strange</b> <br />
+            in The Multiverse of Madness
+          </h1>
+          <p>
+            Doctor Strange teams up with a mysterious teenage girl from his dreams who can travel across multiverses
+            <span class="more">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius repudiandae sequi eaque ut, nihil
+              suscipit et molestias ipsam vel beatae.
+            </span>
+            <span class="three-dots">...</span>
+            <span id="read-more">Read more</span>
+            <span id="less">. Less</span>
+          </p>
+        </div>
+        <div class="desktop-navigation">
+          <button id="prev-button"><div>&lt;</div></button>
+          <button id="next-button"><div>&gt;</div></button>
+        </div>
+        <h3>Select Date and Time</h3>
+        <div class="date-selection">
+          <div></div>
+        </div>
+        <button id="reserve-button" class="primary-button">
+          <div>reservation</div>
+        </button>
+      </div>
+    </div>
+    <div class="seat-container d-none">
+      <nav>
+        <button id="back-button" data-test="example test">
+          <div>
+            <img src="../assets/back.svg" alt="">
+          </div>
+        </button>
+        <button id="prev-button" class="d-none" data-test="example test">
+          <div>
+            <img src="../assets/back.svg" alt="">
+          </div>
+        </button>
+        <h3>Choose your seats</h3>
+        <button>
+          <div>
+            <img src="../assets/date.svg" alt="">
+          </div>
+        </button>
+      </nav>
+      <div>
+        <div class="screen">
+          <svg viewBox="0 0 336 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 33.5V33.5C109.147 -7.67231 226.853 -7.67231 333 33.5V33.5" stroke="#D40800"
+              stroke-width="5" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="seat-picker">
+          <div id="seat-row-one" class="seat-row justify-around">
+            <div class="seat-row"></div>
+            <div class="seat-row"></div>
+          </div>
+          <div id="seat-row-two" class="seat-row justify-between">
+            <div class="seat-row"></div>
+            <div class="seat-row"></div>
+          </div>
+          <div id="seat-row-three" class="seat-row"></div>
+          <div id="seat-row-four" class="seat-row"></div>
+          <div id="seat-row-five" class="seat-row"></div>
+          <div id="seat-row-six" class="seat-row"></div>
+        </div>
+        <div class="seat-note">
+          <div>
+            <div class="circle"></div>
+            <p>Available</p>
+          </div>
+          <div>
+            <div class="circle unavailable"></div>
+            <p>Reserved</p>
+          </div>
+          <div>
+            <div class="circle selected"></div>
+            <p>Selected</p>
+          </div>
+        </div>
+      </div>
+      <hr class="mobile-d-none">
+      <div class="seat-selected-description">
+        <div class="selected-info">
+          <div>
+            <img src="../assets/date.svg" alt="">
+            <p>
+              June 21st, 2023 &#x2022; 6 p.m.
+            </p>
+          </div>
+          <div>
+            <img src="../assets/seat.svg" alt="">
+            <p id="selected-seats-name">
+              Please select a seat
+              <!-- VIP Section &#x2022; Seats 5-7 -->
+            </p>
+          </div>
+          <div>
+            <img src="../assets/ion_cart.svg" alt="">
+            <p>
+              Total: $<span id="total-price">0</span>
+            </p>
+          </div>
+        </div>
+        <div class="mobile-book-button">
+          <div class="book-button-background">
+            <button disabled id="buy-button">
+              Buy
+            </button>
+          </div>
+        </div>
+        <div class="desktop-book-button">
+          <button id="buy-button" class="primary-button">
+            <div><a href="ticket.html">BUY</a></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal">
+    <h3>Are you sure</h3>
+    <div>
+      <button id="yes-button">Yes</button>
+      <button id="no-button">Cancel</button>
+    </div>
+  </div>
+  <script src="data/seat_data.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

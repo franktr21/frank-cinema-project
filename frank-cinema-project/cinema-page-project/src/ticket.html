@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket</title>
+    <link rel="icon" type="image/x-icon" href="../assets/doctor_strange_pixel_by_president_liv_dapu6qb-fullview.jpg">
+
+<style>
+    body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(to bottom, #b24c49 0%, #c93530 20%, #c3110b 50%, #c93530 75%, #b24c49  100%);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ticket-container {
+    background: linear-gradient(135deg, #420B0B, #2C0909);
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    flex-grow: 1;
+    position: relative;
+    margin-top: 60px;
+}
+
+.ticket-header {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    position: relative;
+}
+
+.ticket-header::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #D40800 0%, #D40800 100%);
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+
+.ticket-image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.ticket-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    width: 80%;
+    height: auto;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    margin-top: 60px;
+}
+
+.ticket-image-1 {
+    z-index: 3;
+}
+
+.ticket-image-2 {
+    z-index: 2;
+    opacity: 0.8;
+}
+
+.ticket-image-3 {
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.ticket-details {
+    background-color: #420B0B;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.ticket-details div {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.barcode img {
+    width: 100%;
+    height: auto;
+}
+
+.footer,
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background: linear-gradient(to bottom, #991010 0%, #580000 100%);
+    padding: 10px 0;
+    position: fixed;
+    padding-top: 15px;
+}
+
+.footer {
+    bottom: 0;
+}
+
+.navbar {
+    top: 0;
+    display: none;
+}
+
+.footer div,
+.navbar div {
+    border-radius: 10px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.footer div:hover,
+.navbar div:hover {
+    transform: scale(1.1);
+    background-color: #780808;
+}
+
+.footer img,
+.navbar img {
+    width: 18px;
+    height: 20px;
+}
+
+#main-button {
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+    background-color: #D40800;
+    border-radius: 50%;
+}
+
+#main-button:hover {
+    background-color: #A30600;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="ticket-container">
+        <div class="ticket-header">
+            Mobile Ticket
+        </div>
+        <p>Once you buy a movie ticket, simply scan the barcode to watch your movie.</p>
+        <div class="ticket-content">
+            <div class="ticket-image-container">
+                <img src="../assets/opp1.png" alt="Movie Poster" class="ticket-image ticket-image-1">
+                <img src="../assets/opp1.png" alt="Movie Poster" class="ticket-image ticket-image-2">
+                <img src="../assets/opp1.png" alt="Movie Poster" class="ticket-image ticket-image-3">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div>
+            <img src="../assets/home.png" alt="Home">
+        </div>
+
+        <div>
+            <img src="../assets/location.png" alt="Location">
+        </div>
+
+        <div>
+            <img id="main-button" src="../assets/middle-button.png" alt="Main Button">
+        </div>
+
+        <div>
+            <img src="../assets/menu.png" alt="Menu">
+        </div>
+
+        <div>
+            <img src="../assets/profile.png" alt="Profile">
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div>
+            <img src="../assets/home.png" alt="Home">
+        </div>
+
+        <div>
+            <img src="../assets/location.png" alt="Location">
+        </div>
+
+        <div>
+            <img id="main-button" src="../assets/middle-button.png" alt="Main Button">
+        </div>
+
+        <div>
+            <img src="../assets/menu.png" alt="Menu">
+        </div>
+
+        <div>
+            <img src="../assets/profile.png" alt="Profile">
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const images = document.querySelectorAll('.ticket-image');
+            images.forEach((img, index) => {
+                if (index === 0) return;
+                setTimeout(() => {
+                    if (index === 1) {
+                        img.style.transform = `translateX(-70%) rotate(-10deg)`; 
+                    } else if (index === 2) {
+                        img.style.transform = `translateX(-30%) rotate(10deg)`; 
+                    }
+                    img.style.opacity = 1;
+                }, (index - 1) * 300);
+            });
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Doctor Strange in the Multiverse of Madness</title>
+<link rel="icon" type="image/x-icon" href="../assets/doctor_strange_pixel_by_president_liv_dapu6qb-fullview.jpg">
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url(../assets/hb_disney_doctorstrangeinthemultiverseofmadness_mobile_d4cf4453.jpeg);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar {
+    background-color: #8B0000; /* Dark red */
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .navbar a:hover {
+    color: #FFC107; /* Gold */
+  }
+  .navbar .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .container {
+    max-width: 800px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .background-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    filter: brightness(0.8);
+  }
+  .content {
+    padding: 20px;
+    text-align: center;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  .genre {
+    font-size: 16px;
+    color: #66CCCC;
+    margin-right: 10px;
+  }
+  .details {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .rating {
+    font-size: 18px;
+    color: #FFC107;
+    margin-bottom: 10px;
+  }
+  .buttons {
+    margin-top: 20px;
+  }
+  .button {
+    background-color: #8B0000; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .button:hover {
+    background-color: #A52A2A; 
+  }
+  .trailer-button {
+    margin-right: 10px;
+  }
+  @media (max-width: 768px) {
+    .navbar a {
+      margin: 0 8px;
+      font-size: 14px;
+    }
+    .content {
+      padding: 15px;
+    }
+    .title {
+      font-size: 20px;
+    }
+    .genre {
+      font-size: 14px;
+    }
+    .details, .description, .rating {
+      font-size: 14px;
+    }
+    .button {
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 480px) {
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+    }
+    .navbar a {
+      display: none;
+      font-size: 12px;
+    }
+    .navbar .menu-icon {
+      display: block;
+      color: #fff;
+    }
+    .navbar .menu-icon.active + a {
+      display: block;
+    }
+    .content {
+      padding: 10px;
+    }
+    .title {
+      font-size: 18px;
+    }
+    .genre {
+      font-size: 12px;
+    }
+    .details, .description, .rating {
+      font-size: 12px;
+    }
+    .button {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="navbar">
+  <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+  <a href="#">Home</a>
+  <a href="#">Movies</a>
+  <a href="#">TV Shows</a>
+  <a href="#">About</a>
+</div>
+<div class="container">
+  <img src="../assets/hb_disney_doctorstrangeinthemultiverseofmadness_mobile_d4cf4453.jpeg" alt="Doctor Strange in the Multiverse of Madness" class="background-image">
+  <div class="content">
+    <div class="title">Doctor Strange in the Multiverse of Madness</div>
+    <div>
+      <span class="genre">ADVENTURE</span>
+      <span class="genre">FANTASY</span>
+    </div>
+    <div class="details">English • April 27, 2018 (USA) • 2h 30m</div>
+    <div class="description">Doctor Strange teams up with a mysterious teenage girl from his dreams who can travel across multiverses, to battle multiple threats</div>
+    <div class="rating">❤️ 99% want to see</div>
+    <div class="buttons">
+      <a href="https://www.youtube.com/watch?v=aWzlQ2N6qqg" class="button trailer-button">Watch Trailer</a>
+      <a href="index.html" class="button tickets-button">Book Tickets</a>
+    </div>
+  </div>
+</div>
+<script>
+  function toggleMenu() {
+    var links = document.querySelectorAll('.navbar a');
+    links.forEach(link => {
+      if (link.style.display === 'block') {
+        link.style.display = 'none';
+      } else {
+        link.style.display = 'block';
+      }
+    });
+  }
+</script>
+</body>
+</html>
